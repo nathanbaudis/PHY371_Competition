@@ -60,3 +60,9 @@ def load_testing_data(path='data/'):
     x_test = np.concatenate((x_test_eeg1, x_test_eeg2, x_test_emg), axis=2)
 
     return x_test
+
+
+def generate_submission(y_pred, filename):
+    y_classes = y_pred.argmax(axis=1)
+    df = pd.DataFrame(y_classes, columns=['y'])
+    df.to_csv('submissions/' + filename + '.csv', index_label='Id')
