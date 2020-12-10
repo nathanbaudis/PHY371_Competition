@@ -64,5 +64,7 @@ def load_testing_data(path='data/'):
 
 def generate_submission(y_pred, filename):
     y_classes = y_pred.argmax(axis=1)
+    # Shift values to 1, 2, 3
+    y_classes += 1
     df = pd.DataFrame(y_classes, columns=['y'])
     df.to_csv('submissions/' + filename + '.csv', index_label='Id')
