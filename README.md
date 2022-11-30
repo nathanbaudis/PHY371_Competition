@@ -1,4 +1,4 @@
-# Machine Learning for Sciences Competition
+# Machine Learning for the Sciences Competition
 
 Notebooks used to generate submissions in the in-class competition in Machine Learning for the Sciences, UZH fall semester 2020. 
 
